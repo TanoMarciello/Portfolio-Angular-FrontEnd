@@ -25,9 +25,13 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "src/assets/bootstrap-5.0.1/css/bootstrap.css",
+              "src/assets/bootstrap-5.0.1/css/bootstrap-icons.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/bootstrap-5.0.1/js/bootstrap.js"
+            ]
           },
           "configurations": {
             "production": {
