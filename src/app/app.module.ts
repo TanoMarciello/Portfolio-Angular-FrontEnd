@@ -5,8 +5,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BannerComponent } from './components/banner/banner.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
-import { InfoComponent } from './info/info.component';
-import { ExperienciaComponent } from './experiencia/experiencia.component';
+import { InfoComponent } from './components/info/info.component';
+import { ExperienciaComponent } from './components/experiencia/experiencia.component';
+import { SkillsComponent } from './components/skills/skills.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { ExperienciaComponent } from './experiencia/experiencia.component';
     BannerComponent,
     NavbarComponent,
     InfoComponent,
-    ExperienciaComponent
+    ExperienciaComponent,
+    SkillsComponent
   ],
   imports: [
     BrowserModule,
