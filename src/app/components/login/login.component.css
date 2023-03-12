@@ -1,0 +1,36 @@
+#login {
+    font-size: 14px;
+    color: #4c555e;
+}
+
+.divider:after,
+.divider:before {
+content: "";
+flex: 1;
+height: 1px;
+background: #eee;
+}
+.h-custom {
+height: calc(100% - 73px);
+}
+@media (max-width: 450px) {
+.h-custom {
+height: 100%;
+}
+}
+button[type=submit] {
+    background: #0563bb;
+    border: 0;
+    padding: 10px 35px;
+    color: #fff;
+    transition: 0.4s;
+    border-radius: 50px;
+    margin: 0 0 40px 0;
+  }
+
+  button[type=submit]:hover {
+    background: #0678e3;
+  }
+  input {
+    border-radius: 50px;
+  }
