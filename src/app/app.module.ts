@@ -10,11 +10,12 @@ import { ExperienciaComponent } from './components/experiencia/experiencia.compo
 import { SkillsComponent } from './components/skills/skills.component';
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { ContactoComponent } from './components/contacto/contacto.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
-    BannerComponent,
+    BannerComponent,  
     NavbarComponent,
     InfoComponent,
     ExperienciaComponent,
@@ -24,7 +25,8 @@ import { ContactoComponent } from './components/contacto/contacto.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
