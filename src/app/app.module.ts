@@ -11,6 +11,9 @@ import { SkillsComponent } from './components/skills/skills.component';
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { ContactoComponent } from './components/contacto/contacto.component';
 import { HttpClientModule } from '@angular/common/http';
+import { HomeComponent } from './components/home/home.component';
+import { LoginComponent } from './components/login/login.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +24,10 @@ import { HttpClientModule } from '@angular/common/http';
     ExperienciaComponent,
     SkillsComponent,
     PortfolioComponent,
-    ContactoComponent
+    ContactoComponent,
+    HomeComponent,
+    LoginComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
