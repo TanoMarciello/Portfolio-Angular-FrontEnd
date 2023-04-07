@@ -6,32 +6,47 @@
             class="img-fluid" alt="Sample image">
         </div>
         <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1" style="margin-top: 60px;">
-          <form>
-            <!-- Email input -->
+
+          <form #f="ngForm" (ngSubmit)="onLogin()" novalidate>
+
+            <!-- User input -->
             <div class="form-outline mb-4">
-              <input type="email" id="form3Example3" class="form-control form-control-lg"
-                placeholder="Ingresar Email" />
+              <input type="email" 
+                     id="nombreUsuario" 
+                     name="nombreUsuario" 
+                     class="form-control form-control-lg"
+                     [(ngModel)]="nombreUsuario"
+                     [ngModelOptions]="{standalone: true}"
+                     placeholder="Ingresar usuario" 
+                     required
+              />
+                
             </div>
   
             <!-- Password input -->
             <div class="form-outline mb-3">
-              <input type="password" id="form3Example4" class="form-control form-control-lg"
-                placeholder="Ingresar contraseña" />
+              <input type="password" 
+                     id="password" 
+                     class="form-control form-control-lg"
+                     [(ngModel)]="password" 
+                     [ngModelOptions]="{standalone: true}"
+                     placeholder="Ingresar contraseña" 
+                     required 
+              />
             </div>
   
             <div class="d-flex justify-content-between align-items-center">
               <!-- Checkbox -->
               <div class="form-check mb-0">
                 <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3" />
-                <label class="form-check-label" for="form2Example3">
-                  Recordarme
-                </label>
+                <label class="form-check-label" for="form2Example3">Recordarme</label>
               </div>
             </div>
   
             <div class="text-center text-lg-start mt-4 pt-2">
                 <button type="submit">Log In</button>
             </div>
+            <a href="/" style="text-align: right;">Volver</a>
   
           </form>
         </div>
