@@ -1,0 +1,47 @@
+<button type="submit" routerLink="/nuevaedu" *ngIf="isLogged">Agregar educación</button>
+<h3 class="resume-title">Formación académica</h3>
+<div class="resume-item">
+  <h4>Universidad Nacional de Rosario</h4>
+  <h5>2019 - Presente</h5>
+  <p>Estudiante avanzado de ingeniería electrónica, con un 70% de la carrera completada y 8.00 de promedio.</p>
+  <ul>
+    <li>Rosario, Santa Fe</li>
+    <li><a href="https://web.fceia.unr.edu.ar/es/" target="_blank">Sitio Web</a></li>
+  </ul>
+</div>
+
+
+<div class="resume-item">
+  <h4>Instituto San Pablo</h4>
+  <h5>2012 - 2018</h5>
+  <p>Egresado como técnico electrónico.</p>
+  <ul>
+    <li>Villa Constitución, Santa Fe</li>
+    <li><a href="https://escuela2073sanpablo.blogspot.com/" target="_blank">Sitio Web</a></li>
+  </ul>
+</div>
+<div class="resume-item">
+
+  <h4>Instituto ICR</h4>
+  <h5>2018</h5>
+  <p><b>Diseño Gráfico </b></p>
+  <p>Curso presencial de un año. Enfocado en Illustrator, Photoshop, Corel Draw e InDesign.</p>
+  <ul>
+    <li>Rosario, Santa Fe</li>
+    <li><a href="https://www.institutoicr.com.ar/" target="_blank">Sitio Web</a></li>
+  </ul>
+</div>
+<div class="resume-item" *ngFor="let Educacion of edu">
+  <h4>{{Educacion.nombreEd}}</h4>
+  <h5>{{Educacion.periodoEd}}</h5>
+  <p>{{Educacion.descripcionEd}}</p>
+  <ul>
+    <li>{{Educacion.ubicacionEd}}</li>
+    <li *ngIf="Educacion.webEd"><a href="http://{{Educacion.webEd}}" target="_blank">Sitio Web</a></li>
+  </ul>
+  <div *ngIf="isLogged">
+    <button routerLink="/editedu/{{Educacion.id}}"><i class="bi bi-pen-fill"></i></button>
+    
+    <button (click)="delete(Educacion.id)"><i class="bi bi-trash3-fill"></i></button>
+  </div>
+</div>
