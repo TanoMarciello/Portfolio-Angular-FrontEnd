@@ -1,0 +1,45 @@
+<div class="container" *ngIf="persona">
+    <div class="row">
+        <div>
+            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+                <div class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="persona.nombre" required>
+                    <label for="apellido">Apellido</label>
+                    <input type="text" class="form-control" id="apellido" name="apellido" [(ngModel)]="persona.apellido" required>
+                    <label for="img">Foto</label>
+                    <input type="file" class="form-control" id="img" name="img" [(ngModel)]="persona.img" (change)="uploadImage($event)" accept=".jpg,.jpeg,.png">
+                    <div class="imagen">
+                        <img [src]="imageService.url" width="200px">
+                    </div>
+
+                    <label for="edad">Edad</label>
+                    <input type="number" class="form-control" id="edad" name="edad" [(ngModel)]="persona.edad" required>
+                    <label for="descripcion">Descripción</label>
+                    <input type="text" class="form-control" id="descripcion" name="descripcion" [(ngModel)]="persona.descripcion">
+                    <label for="nacionalidad">Nacionalidad</label>
+                    <input type="text" class="form-control" id="nacionalidad" name="nacionalidad" [(ngModel)]="persona.nacionalidad" required>
+                    <label for="estadoCivil">Estado Civil</label>
+                    <input type="text" class="form-control" id="estadoCivil" name="estadoCivil" [(ngModel)]="persona.estadoCivil" required>
+                    <label for="titulo">Título</label>
+                    <input type="text" class="form-control" id="titulo" name="titulo" [(ngModel)]="persona.titulo">
+                    <label for="domicilio">Domicilio</label>
+                    <input type="text" class="form-control" id="domicilio" name="domicilio" [(ngModel)]="persona.domicilio" required>
+                    <label for="email">Email</label>
+                    <input type="text" class="form-control" id="email" name="email" [(ngModel)]="persona.email" required>
+                    <label for="telefono">Telefono</label>
+                    <input type="text" class="form-control" id="telefono" name="telefono" [(ngModel)]="persona.telefono" required>
+                    <label for="facebook">Facebook</label>
+                    <input type="text" class="form-control" id="facebook" name="facebook" [(ngModel)]="persona.facebook">
+                    <label for="instagram">Instagram</label>
+                    <input type="text" class="form-control" id="instagram" name="instagram" [(ngModel)]="persona.instagram">
+                    <label for="discord">Discord</label>
+                    <input type="text" class="form-control" id="discord" name="discord" [(ngModel)]="persona.discord">
+                    <label for="github">Github</label>
+                    <input type="text" class="form-control" id="github" name="github" [(ngModel)]="persona.github">
+                </div>
+                <button type="submit">Editar</button>
+            </form>
+        </div>
+    </div>
+</div>
