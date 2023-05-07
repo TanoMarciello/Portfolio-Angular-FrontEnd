@@ -1,23 +1,45 @@
-<div class="container" *ngIf="expLab">
-    <div class="row">
-        <div>
-            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
-                <div class="form-group">
-                    <label for="nombreE">Nombre de la Empresa</label>
-                    <input type="text" class="form-control" id="nombreE" name="nombreE" [(ngModel)]="expLab.nombreE" required>
-                    <label for="nombreE">Puesto en la empresa</label>
-                    <input type="text" class="form-control" id="puestoE" name="puestoE" [(ngModel)]="expLab.puestoE" required>
-                    <label for="descripcionE">Descripción del trabajo</label>
-                    <input type="text" class="form-control" id="descripcionE" name="descripcionE" [(ngModel)]="expLab.descripcionE" required>
-                    <label for="descripcionE">Período de tiempo</label>
-                    <input type="text" class="form-control" id="periodoE" name="periodoE" [(ngModel)]="expLab.periodoE" required>
-                    <label for="descripcionE">Ubicación</label>
-                    <input type="text" class="form-control" id="ubicacionE" name="ubicacionE" [(ngModel)]="expLab.ubicacionE" required>
-                    <label for="descripcionE">Sitio web</label>
-                    <input type="text" class="form-control" id="webE" name="webE" [(ngModel)]="expLab.webE" >
-                </div>
-                <button type="submit">Editar</button>
-            </form>
+<section  id="edit" class="vh-100" *ngIf="expLab">
+    <div class="container-fluid h-custom">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-md-9 col-lg-6 col-xl-5">
+          <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp"
+            class="img-fluid" alt="Sample image">
         </div>
+        <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1" style="margin-top: 0px;">
+
+          <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+
+            <div class="form-outline mb-3">
+                <label for="nombreE">Nombre de la Empresa</label>
+                <input type="text" class="form-control" id="nombreE" name="nombreE" [(ngModel)]="expLab.nombreE" required>
+            </div>
+            <div class="form-outline mb-3">
+                <label for="nombreE">Puesto en la empresa</label>
+                <input type="text" class="form-control" id="puestoE" name="puestoE" [(ngModel)]="expLab.puestoE" required>
+            </div>
+            <div class="form-outline mb-3">
+                <label for="descripcionE">Descripción del trabajo</label>
+                <input type="text" class="form-control" id="descripcionE" name="descripcionE" [(ngModel)]="expLab.descripcionE" required>
+            </div>
+            <div class="form-outline mb-3">
+                <label for="descripcionE">Período de tiempo</label>
+                <input type="text" class="form-control" id="periodoE" name="periodoE" [(ngModel)]="expLab.periodoE" required>
+            </div>
+            <div class="form-outline mb-3">
+                <label for="descripcionE">Ubicación</label>
+                <input type="text" class="form-control" id="ubicacionE" name="ubicacionE" [(ngModel)]="expLab.ubicacionE" required>
+            </div>
+            <div class="form-outline mb-3">
+                <label for="descripcionE">Sitio web</label>
+                <input type="text" class="form-control" id="webE" name="webE" [(ngModel)]="expLab.webE" >
+            </div>
+  
+            <div class="text-center text-lg-start mt-4 pt-2">
+                <button type="submit">Editar</button>
+                <a href="/#resume" style="text-align: right; margin-left: 60%;">Volver</a>
+            </div>
+          </form>
+        </div>
+      </div>
     </div>
-</div>
+  </section>

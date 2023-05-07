@@ -1,21 +1,41 @@
-<div class="container">
-    <div class="row">
-        <div>
-            <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
-                <div class="form-group">
-                    <label for="nombreEd">Nombre de la Institución</label>
-                    <input type="text" class="fomr-control" id="nombreEd" name="nombreEd" [(ngModel)]="nombreEd" required>
-                    <label for="descripcionEd">Descripción de la formación</label>
-                    <input type="text" class="fomr-control" id="descripcionEd" name="descripcionEd" [(ngModel)]="descripcionEd" required>
-                    <label for="descripcionE">Período de tiempo</label>
-                    <input type="text" class="fomr-control" id="periodoEd" name="periodoEd" [(ngModel)]="periodoEd" required>
-                    <label for="descripcionE">Ubicación</label>
-                    <input type="text" class="fomr-control" id="ubicacionE" name="ubicacionE" [(ngModel)]="ubicacionEd" required>
-                    <label for="descripcionE">Sitio web</label>
-                    <input type="text" class="fomr-control" id="webEd" name="webEd" [(ngModel)]="webEd" >
-                </div>
-                <button type="submit">Agregar</button>
-            </form>
+<section  id="edit" class="vh-100">
+    <div class="container-fluid h-custom">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-md-9 col-lg-6 col-xl-5">
+          <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp"
+            class="img-fluid" alt="Sample image">
         </div>
+        <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1" style="margin-top: 60px;">
+
+          <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+
+            <div class="form-outline mb-3">
+                <label for="nombreEd">Nombre de la Institución</label>
+                <input type="text" class="form-control" id="nombreEd" name="nombreEd" [(ngModel)]="nombreEd" required>
+            </div>
+            <div class="form-outline mb-3">
+                <label for="descripcionEd">Descripción de la formación</label>
+                <input type="text" class="form-control" id="descripcionEd" name="descripcionEd" [(ngModel)]="descripcionEd" required>
+            </div>
+            <div class="form-outline mb-3">
+                <label for="descripcionEd">Período de tiempo</label>
+                <input type="text" class="form-control" id="periodoEd" name="periodoEd" [(ngModel)]="periodoEd" required>
+            </div>
+            <div class="form-outline mb-3">
+                <label for="ubicacionEd">Ubicación</label>
+                <input type="text" class="form-control" id="ubicacionE" name="ubicacionE" [(ngModel)]="ubicacionEd" required>
+            </div>
+            <div class="form-outline mb-3">
+                <label for="webEd">Sitio web</label>
+                <input type="text" class="form-control" id="webEd" name="webEd" [(ngModel)]="webEd" >
+            </div>
+  
+            <div class="text-center text-lg-start mt-4 pt-2">
+                <button type="submit">Agregar</button>
+                <a href="/#resume" style="text-align: right; margin-left: 60%;">Volver</a>
+            </div>
+          </form>
+        </div>
+      </div>
     </div>
-</div>
+  </section>

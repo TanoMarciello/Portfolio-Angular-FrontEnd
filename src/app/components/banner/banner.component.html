@@ -4,12 +4,12 @@
       <div class="row">
         <div class="col-8">
           <h1>{{persona.nombre | uppercase}} {{persona.apellido | uppercase}}</h1>
-          <p>Desarrollador web</p>
+          <p>{{persona.titulo}}</p>
           <div class="social-links">
-            <a href="#"><i class="bi bi-facebook"></i></a>
-            <a href="#"><i class="bi bi-instagram"></i></a>
-            <a href="#"><i class="bi bi-discord"></i></a>
-            <a href="#"><i class="bi bi-github"></i></a>
+            <a href="https://{{persona.facebook}}" target="_blank"><i class="bi bi-facebook"></i></a>
+            <a href="https://{{persona.instagram}}" target="_blank"><i class="bi bi-instagram"></i></a>
+            <a href="https://{{persona.discord}}" target="_blank"><i class="bi bi-discord"></i></a>
+            <a href="https://{{persona.github}}" target="_blank"><i class="bi bi-github"></i></a>
           </div>
         </div>
         <div class="col-4">

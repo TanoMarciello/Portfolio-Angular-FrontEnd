@@ -40,6 +40,7 @@
     overflow: hidden;
     z-index: 1;
     background: rgba(69, 80, 91, 0.8);
+    border-radius: 50px;
   }
   
   .portfolio .portfolio-wrap::before {
@@ -51,6 +52,7 @@
     top: 30px;
     bottom: 30px;
     transition: all ease-in-out 0.3s;
+    border-radius: 50px;
     z-index: 2;
     opacity: 0;
   }

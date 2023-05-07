@@ -1,15 +1,29 @@
-<div class="container">
-    <div class="row">
-        <div>
-            <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
-                <div class="form-group">
-                    <label for="nombre">Nueva habilidad</label>
-                    <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="nombre" required>
-                    <label for="porcentaje">Porcentaje</label>
-                    <input type="text" class="form-control" id="porcentaje" name="porcentaje" [(ngModel)]="porcentaje" required>
-                </div>
-                <button type="submit">Agregar</button>
-            </form>
+<section  id="edit" class="vh-100">
+    <div class="container-fluid h-custom">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-md-9 col-lg-6 col-xl-5">
+          <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp"
+            class="img-fluid" alt="Sample image">
         </div>
+        <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1" style="margin-top: 60px;">
+
+          <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+
+            <div class="form-outline mb-3">
+                <label for="nombre">Nueva habilidad</label>
+                <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="nombre" required>
+            </div>
+            <div class="form-outline mb-3">
+                <label for="porcentaje">Porcentaje</label>
+                <input type="number" max="100" min="0" class="form-control" id="porcentaje" name="porcentaje" [(ngModel)]="porcentaje" required>
+            </div>
+  
+            <div class="text-center text-lg-start mt-4 pt-2">
+                <button type="submit">Agregar</button>
+                <a href="/#skills" style="text-align: right; margin-left: 60%;">Volver</a>
+            </div>
+          </form>
+        </div>
+      </div>
     </div>
-</div>
+  </section>
