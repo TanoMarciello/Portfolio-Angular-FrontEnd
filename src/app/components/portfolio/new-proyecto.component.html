@@ -1,0 +1,42 @@
+<section  id="edit" class="vh-100">
+    <div class="container-fluid h-custom">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-md-9 col-lg-6 col-xl-5">
+          <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp"
+            class="img-fluid" alt="Sample image">
+        </div>
+        <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1" style="margin-top: 0px;">
+
+          <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+
+            <div class="form-outline mb-3">
+                <label for="nombreE">Nombre del proyecto</label>
+                <input type="text" class="form-control" id="nombreP" name="nombreP" [(ngModel)]="nombreP" required>
+            </div>
+            <div class="form-outline mb-3">
+                <label for="descripcionE">Descripción del proyecto</label>
+                <input type="text" class="form-control" id="descripcionP" name="descripcionP" [(ngModel)]="descripcionP" >
+            </div>
+            <div class="form-outline mb-3">
+              <label for="descripcionE">Sitio web</label>
+              <input type="text" class="form-control" id="webP" name="webP" [(ngModel)]="webP" >
+          </div>
+          <!--
+           <div class="form-outline mb-3">
+                <label for="img">Imagen del proyecto</label>
+                <input type="file" class="form-control" id="img" name="img" [(ngModel)]="imgP" (change)="uploadImage($event)" accept=".jpg,.jpeg,.png">
+            </div>
+          
+            <div class="imagen" style="margin-top: 15px;">
+                <img [src]="imageService.url" width="100px" style=" border-radius: 30px;">
+            </div>
+          -->
+            <div class="text-center text-lg-start mt-4 pt-2">
+                <button type="submit">Agregar</button>
+                <a href="/#portfolio" style="text-align: right; margin-left: 60%;">Volver</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>

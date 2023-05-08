@@ -1,19 +1,19 @@
   <!-- ======= Footer ======= -->
   <footer id="footer">
     <div class="container">
-      <h3>{{persona.nombre}} {{persona.apellido}}</h3>
+      <h3>{{persona?.nombre}} {{persona?.apellido}}</h3>
       <div class="social-links">
-        <a href="https://{{persona.facebook}}" target="_blank"><i class="bi bi-facebook"></i></a>
-        <a href="https://{{persona.instagram}}" target="_blank"><i class="bi bi-instagram"></i></a>
-        <a href="https://{{persona.discord}}" target="_blank"><i class="bi bi-discord"></i></a>
-        <a href="https://{{persona.github}}" target="_blank"><i class="bi bi-github"></i></a>
+        <a href="https://{{persona?.facebook}}" target="_blank"><i class="bi bi-facebook"></i></a>
+        <a href="https://{{persona?.instagram}}" target="_blank"><i class="bi bi-instagram"></i></a>
+        <a href="https://{{persona?.discord}}" target="_blank"><i class="bi bi-discord"></i></a>
+        <a href="https://{{persona?.github}}" target="_blank"><i class="bi bi-github"></i></a>
       </div>
       <div>
         <button type="submit" (click)="login()" *ngIf="!isLogged">Ingresar</button>
         <button type="submit" (click)="onLogOut()" *ngIf="isLogged">Cerrar Sesión</button>
       </div>
       <div class="copyright">
-        &copy; Copyright <strong><span>{{persona.nombre}} {{persona.apellido}}</span></strong>. All Rights Reserved
+        &copy; Copyright <strong><span>{{persona?.nombre}} {{persona?.apellido}}</span></strong>. All Rights Reserved
       </div>
       <p>Argentina Programa 4.0</p>
     </div>
