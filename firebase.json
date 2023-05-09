@@ -1,5 +1,13 @@
 {
   "storage": {
     "rules": "storage.rules"
+  },
+  "hosting": {
+    "public": "dist/portfolio-angular",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
   }
 }

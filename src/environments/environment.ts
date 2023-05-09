@@ -10,8 +10,8 @@ export const environment = {
     messagingSenderId: '329645221683',
     measurementId: 'G-2QK3H3QB4D',
   },
-  production: false,
-  URL: 'http://localhost:8080/',
-  //URL: 'Servidor'
+  production: true,
+ // URL: 'http://localhost:8080/',
+  URL: 'https://portfolio-backend-lfod.onrender.com/',
 };
 
