@@ -36,7 +36,7 @@ export class NewProyectoComponent {
   uploadImage($event:any){
     const id = this.activatedRouter.snapshot.params['id'];
     this.imgP = this.imageService.url;
-    const name = "proyecto_" + id+1; //Para que no se pise con la foto de perfil
-    this.imageService.uploadImage($event, name, id+1);
+    const name = "proyecto_" + id;
+    this.imageService.uploadImage($event, name, id);
   }
 }
